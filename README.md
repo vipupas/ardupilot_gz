@@ -22,6 +22,8 @@ The project is adapted from the [`ros_gz_project_template`](https://github.com/g
 - Install [ROS 2 Humble](https://docs.ros.org/en/humble/index.html)
 - Install [Gazebo Harmonic (recommended)](https://gazebosim.org/docs/harmonic) or [Gazebo Ionic](https://gazebosim.org/docs/ionic)
 - Follow the [`Installing Build Dependencies`](https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_DDS#installing-build-dependencies) section of `AP_DDS`'s README
+- sudo apt install python3-vcstool    {this for vcs}
+- sudo apt install python3-rosdep2    {this for rosdep}
 
 ## Install
 
@@ -49,11 +51,11 @@ export GZ_VERSION=harmonic
 #### 4. Update ROS dependencies
 
 ```bash
-cd ~/ros2_ws
-source /opt/ros/humble/setup.bash
+cd ~/ardu_ws
 sudo apt update
 rosdep update
-rosdep install --from-paths src --ignore-src -y
+source /opt/ros/humble/setup.bash
+rosdep install --from-paths src --ignore-src -r -y
 ```
 
 #### 5. Build
