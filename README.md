@@ -51,11 +51,11 @@ export GZ_VERSION=harmonic
 #### 4. Update ROS dependencies
 
 ```bash
-cd ~/ardu_ws
+cd ~/ros2_ws
 sudo apt update
 rosdep update
 source /opt/ros/humble/setup.bash
-rosdep install --from-paths src --ignore-src -r -y
+rosdep install --from-paths src --ignore-src -y
 ```
 
 #### 5. Build
